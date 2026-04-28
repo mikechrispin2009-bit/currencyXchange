@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Field Clinic Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#c6ddb8;
+}
+
+.container{
+  display:flex;
+  min-height:100vh;
+}
+
+
+.sidebar{
+  width:230px;
+  background:#2f5618;
+  color:white;
+}
+
+.logo-box{
+  padding:18px 12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-circle{
+  width:46px;
+  height:46px;
+  border:4px solid white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.clinic-name{
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+.menu button{
+  width:100%;
+  border:1px solid #aac892;
+  background:transparent;
+  color:white;
+  padding:12px;
+  text-align:left;
+  cursor:pointer;
+}
+
+.menu button.active{
+  background:#c6ddb8;
+  color:#2f5618;
+  font-weight:bold;
+}
+
+.menu i{
+  margin-right:12px;
+}
+
+.sync-btn{
+  margin:120px 15px 0;
+  width:90px;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  background:#c6ddb8;
+  color:white;
+}
+
+
+.main{
+  flex:1;
+}
+
+.topbar{
+  background:#355d1d;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 25px;
+}
+
+.top-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+}
+
+.reception{
+  background:#8fbc72;
+  padding:8px 14px;
+  border-radius:5px;
+}
+
+.content{
+  padding:18px;
+}
+
+h2{
+  margin-bottom:4px;
+}
+
+.subtitle{
+  font-size:13px;
+}
+
+.cards{
+  display:flex;
+  gap:28px;
+  margin:18px 0;
+}
+
+.card{
+  width:140px;
+  background:#dbe8d0;
+  padding:10px;
+}
+
+.card-top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.big-number{
+  font-size:28px;
+  font-weight:bold;
+}
+
+.orange{color:#d86400;}
+.blue{color:#2166c4;}
+.green{color:#2f5618;}
+
+.form-box{
+  background:#b6d39f;
+  padding:20px;
+}
+
+.form-title{
+  font-weight:bold;
+  text-decoration:underline;
+  margin-bottom:18px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px 40px;
+}
+
+label{
+  font-size:14px;
+  font-weight:bold;
+  display:block;
+  margin-bottom:6px;
+}
+
+input, select{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:4px;
+  background:#f5f5f5;
+}
+
+.status-row{
+  display:flex;
+  gap:15px;
+  margin-top:10px;
+}
+
+.actions{
+  display:flex;
+  gap:30px;
+  margin-top:28px;
+}
+
+.btn{
+  border:none;
+  padding:12px 26px;
+  border-radius:5px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.btn-light{
+  background:#f5f5f5;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="sidebar">
+  <div class="logo-box">
+    <div class="logo-circle">+</div>
+    <div class="clinic-name">GREEN FIELD CLINIC</div>
+  </div>
+
+  <div class="menu">
+    <button class="active"><i class="fa-solid fa-house"></i> Dashbord</button>
+    <button><i class="fa-solid fa-user-plus"></i> Check_in</button>
+    <button><i class="fa-regular fa-id-card"></i> patients</button>
+    <button><i class="fa-solid fa-calendar-days"></i> Appointment</button>
+    <button><i class="fa-solid fa-users"></i> Queue</button>
+    <button><i class="fa-solid fa-gear"></i> settings</button>
+  </div>
+
+  <button class="sync-btn"><i class="fa-solid fa-rotate"></i> Sync(offline)</button>
+</div>
+
+<div class="main">
+  <div class="topbar">
+    <div class="top-item"><i class="fa-solid fa-wifi"></i> Offline mode</div>
+    <div class="top-item"><i class="fa-regular fa-clock"></i> 27/4/2026 , 12:45</div>
+    <div class="top-item reception"><i class="fa-solid fa-user-group"></i> Receptionist <i class="fa-regular fa-circle-down"></i></div>
+  </div>
+
+  <div class="content">
+    <h2>Dashboard</h2>
+    <div class="subtitle">Quick overview of today's Info</div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-top"><i class="fa-solid fa-users fa-2x"></i> <strong>Checked in</strong></div>
+        <div class="big-number green">23</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><i class="fa-regular fa-clock fa-2x orange"></i> <strong>waiting</strong></div>
+        <div class="big-number orange">10</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><i class="fa-solid fa-user-group green"></i> <strong>Total Patients</strong></div>
+        <div class="big-number blue">33</div>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div class="form-title">Quick check_in</div>
+
+      <div class="form-grid">
+        <div>
+          <label>Full name</label>
+          <input placeholder="Enter full name">
+        </div>
+
+        <div>
+          <label>Phone number</label>
+          <input placeholder="Enter phone number">
+        </div>
+
+        <div>
+          <label>Date of birth</label>
+          <input type="date">
+        </div>
+
+        <div>
+          <label>Gender</label>
+          <select><option>select</option></select>
+        </div>
+
+        <div>
+          <label>Reason to visit</label>
+          <select><option>Select reason</option></select>
+        </div>
+
+        <div>
+          <label>status</label>
+          <div class="status-row">
+            <label><input type="checkbox" checked> Checked_in</label>
+            <label><input type="checkbox"> Waiting</label>
+            <label><input type="checkbox"> pending</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-light"><i class="fa-solid fa-user-plus"></i> Check_in patient</button>
+        <button class="btn btn-light">clear</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

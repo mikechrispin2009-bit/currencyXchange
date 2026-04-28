@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>History</title>
+    <link rel="stylesheet" href="css/style4.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img.png" width="80" height="80" style="border-radius: 50%; object-fit: cover;">
+        <font color="white" size="6"><b>MIKE$VESTINE CurrencyXchange</b></font>
+    </header>
+    <nav>
+        <button><a href="index.html">Home</a></button>
+        <button><a href="converter.html">CONVERT</a></button>
+        <button><a href="details.html">Details</a></button>
+        <button><a href="settings.html">Settings</a></button>
+    </nav>
+    <div class="history-container">
+        <h2>Conversion History</h2>
+        <div class="filter-bar">
+            <label>Filter by Currency:</label>
+            <select id="filterCurrency">
+                <option value="all">All Currencies</option>
+                <option value="USD">🇺🇸 US Dollar</option>
+                <option value="EUR">🇪🇺 Euro</option>
+                <option value="GBP">🇬🇧 British Pound</option>
+                <option value="JPY">🇯🇵 Japanese Yen</option>
+                <option value="RWF">🇷🇼 Rwandan Franc</option>
+                <option value="CAD">🇨🇦 Canadian Dollar</option>
+                <option value="AUD">🇦🇺 Australian Dollar</option>
+                <option value="CHF">🇨🇭 Swiss Franc</option>
+                <option value="CNY">🇨🇳 Chinese Yuan</option>
+                <option value="INR">🇮🇳 Indian Rupee</option>
+            </select>
+            <button onclick="applyFilter()">Apply Filter</button>
+        </div>
+        <table class="history-table">
+            <thead>
+                <tr><th>Date & Time</th><th>From</th><th>To</th><th>Amount</th><th>Result</th></tr>
+            </thead>
+            <tbody id="historyBody"></tbody>
+        </table>
+        <button class="clear-btn" onclick="clearHistory()">Clear All History</button>
+    </div>
+    <footer>
+        <p>Email: mikechrispin2009@gmail.com</p>
+        <p>Tel: 0799467538</p>
+        <p>&copy; 2025 CurrencyXchange.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Details</title>
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img.png" width="80" height="80" style="border-radius: 50%; object-fit: cover;">
+        <font color="white" size="6"><b>MIKE$VESTINE CurrencyXchange</b></font>
+    </header>
+
+    <nav>
+        <button><a href="index.html">Home</a></button>
+        <button><a href="converter.html">CONVERT</a></button>
+        <button><a href="history.html">History</a></button>
+        <button><a href="settings.html">Settings</a></button>
+    </nav>
+    <div class="details-container">
+        <div class="currency-selector">
+            <label style="font-weight: bold; font-size: 18px;">Select Currency:</label>
+            <select id="currencySelect" onchange="updateCurrencyDetails()">
+                <option value="USD">🇺🇸 US Dollar (USD)</option>
+                <option value="EUR">🇪🇺 Euro (EUR)</option>
+                <option value="GBP">🇬🇧 British Pound (GBP)</option>
+                <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+                <option value="RWF">🇷🇼 Rwandan Franc (RWF)</option>
+                <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+                <option value="AUD">🇦🇺 Australian Dollar (AUD)</option>
+                <option value="CHF">🇨🇭 Swiss Franc (CHF)</option>
+                <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+                <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+            </select>
+        </div>
+        <div class="info-card">
+            <h2 id="currencyName">US Dollar</h2>
+            <p>Current Exchange Rate (1 USD = ?)</p>
+            <span class="rate-value" id="exchangeRate">1.0000</span>
+            <p id="currencyCode" style="margin-top: 10px;">USD</p>
+        </div>
+            <h3>Exchange Rate Trends (Last 7 Days)</h3>
+            <table class="trend-table" id="trendTable">
+                <thead>
+                    <tr><th>Day</th><th>Exchange Rate (1 USD)</th><th>Change</th></tr>
+                </thead>
+                <tbody id="trendBody"></tbody>
+            </table>
+            <h3>Comparison with Other Currencies</h3>
+            <table class="comparison-table" id="comparisonTable">
+                <thead>
+                    <tr><th>Currency</th><th>Rate (1 USD)</th><th>Inverse Rate</th></tr>
+                </thead>
+                <tbody id="comparisonBody"></tbody>
+            </table>
+            <h3>Historical Rates (Monthly)</h3>
+            <div class="historical-list" id="historicalList"></div>
+    </div>
+    <footer>
+        <p>Email: mikechrispin2009@gmail.com</p>
+        <p>Tel: 0799467538</p>
+        <p>&copy; 2025 CurrencyXchange.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

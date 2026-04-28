@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Converter</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img.png" width="80" height="80" style="border-radius: 50%; object-fit: cover;">
+        <font color="white" size="6"><b>MIKE$VESTINE CurrencyXchange</b></font>
+    </header>
+    <nav>
+        <button><a href="index.html">Home</a></button>
+        <button><a href="details.html">Details</a></button>
+        <button><a href="history.html">History</a></button>
+        <button><a href="settings.html">Settings</a></button>
+    </nav>
+    <div class="converter-box">
+        <form onsubmit="event.preventDefault(); quickConvert()">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label style="font-weight: bold; width: 100px;">Amount:</label>
+                <input type="number" id="quickAmount" placeholder="Enter amount" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                <label style="font-weight: bold; width: 100px;">From:</label>
+                <div style="flex: 1;">
+                    <input type="text" id="searchFrom" placeholder="🔍 Search currency..." style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                    <select id="quickFrom" size="5" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; height: 120px;">
+                        <option value="USD">🇺🇸 US Dollar (USD)</option>
+                        <option value="EUR">🇪🇺 Euro (EUR)</option>
+                        <option value="GBP">🇬🇧 British Pound (GBP)</option>
+                        <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+                        <option value="RWF">🇷🇼 Rwandan Franc (RWF)</option>
+                        <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+                        <option value="AUD">🇦🇺 Australian Dollar (AUD)</option>
+                        <option value="CHF">🇨🇭 Swiss Franc (CHF)</option>
+                        <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+                        <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+                    </select>
+                </div>
+            </div>
+            <div style="text-align: center; margin: 10px 0;">
+                <button type="button" onclick="swapCurrencies()" style="background-color: #34495e; padding: 8px 20px;">🔄 Swap Currencies</button>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                <label style="font-weight: bold; width: 100px;">To:</label>
+                <div style="flex: 1;">
+                    <input type="text" id="searchTo" placeholder="🔍 Search currency..." style="width: 100%; padding: 8px;
+                     margin-bottom: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                    <select id="quickTo" size="5" style="width: 100%; padding: 10px; border: 1px solid #ddd;
+                     border-radius: 5px; height: 120px;">
+                        <option value="USD">🇺🇸 US Dollar (USD)</option>
+                        <option value="EUR" selected>🇪🇺 Euro (EUR)</option>
+                        <option value="GBP">🇬🇧 British Pound (GBP)</option>
+                        <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+                        <option value="RWF">🇷🇼 Rwandan Franc (RWF)</option>
+                        <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+                        <option value="AUD">🇦🇺 Australian Dollar (AUD)</option>
+                        <option value="CHF">🇨🇭 Swiss Franc (CHF)</option>
+                        <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+                        <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" id="convertBtn" style="background-color: #e94560; 
+            color: white; border: none; padding: 12px; border-radius: 5px; font-weight: bold;
+             cursor: pointer; margin-top: 10px; width: 100%;">
+                Convert
+            </button>
+        </form>
+        <div id="resultArea" style="margin-top: 20px;"></div>
+    </div>
+    <footer>
+        <p>Email: mikechrispin2009@gmail.com</p>
+        <p>Tel: 0799467538</p>
+        <p>&copy; 2025 CurrencyXchange.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

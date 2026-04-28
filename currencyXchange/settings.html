@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img.png" width="80" height="80" style="border-radius: 50%; object-fit: cover;">
+        <font color="white" size="6"><b>MIKE$VESTINE CurrencyXchange</b></font>
+    </header>
+    <nav>
+        <button><a href="index.html">Home</a></button>
+        <button><a href="converter.html">CONVERT</a></button>
+        <button><a href="details.html">Details</a></button>
+        <button><a href="history.html">History</a></button>
+        <button class="active"><a href="settings.html">Settings</a></button>
+    </nav>
+    <div class="settings-container">
+        <h2>Settings</h2>
+        <div class="setting-item">
+            <label class="setting-label">🌓 Dark / Light Mode</label>
+            <label class="toggle-switch">
+                <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                <span class="slider"></span>
+            </label>
+            <span class="mode-label" id="modeText">Light Mode</span>
+        </div>
+        <div class="setting-item">
+            <label class="setting-label">💱 Default Currency</label>
+            <select id="defaultCurrency">
+                <option value="USD">🇺🇸 US Dollar (USD)</option>
+                <option value="EUR">🇪🇺 Euro (EUR)</option>
+                <option value="GBP">🇬🇧 British Pound (GBP)</option>
+                <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+                <option value="RWF">🇷🇼 Rwandan Franc (RWF)</option>
+                <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+                <option value="AUD">🇦🇺 Australian Dollar (AUD)</option>
+                <option value="CHF">🇨🇭 Swiss Franc (CHF)</option>
+                <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+                <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+            </select>
+            <div class="info-text">This will be pre-selected in the converter "From" field</div>
+        </div> 
+        <div class="setting-item">
+            <label class="setting-label">🌐 Language</label>
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+            </select>
+            <div class="info-text">Interface language preference</div>
+        </div>
+        <button class="save-btn" onclick="saveSettings()">Save All Settings</button>
+    </div>
+    <footer>
+        <p>Email: mikechrispin2009@gmail.com</p>
+        <p>Tel: 0799467538</p>
+        <p>&copy; 2025 CurrencyXchange.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

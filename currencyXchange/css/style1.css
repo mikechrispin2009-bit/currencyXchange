@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #4882bb;
+    background-image: url("../assets/$.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+body.dark-mode {
+    background-color: #1a1a2e;
+    background-image: url("../assets/$.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+header {
+    background-color: #2c3e50;
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 90%;
+    object-fit: cover;
+}
+nav {
+    background-color: #34495e;
+    text-align: center;
+    padding: 15px;
+}
+button {
+    background-color: #e94560;
+    color: white;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 20px;
+    border: none;
+}
+button:hover {
+    background-color: #4ecedf;
+}
+footer {
+    background-color: #2c3e50;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: 30px;
+}
+footer p {
+    display: block;
+    margin: 5px 0;
+}
+.description {
+    width: 70%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+}
+h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.cta-container {
+    text-align: center;
+    margin: 30px 0;
+}
+.cta-btn {
+    background-color: #e94560;
+    padding: 12px 35px;
+    font-size: 16px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+body.dark-mode .description {
+    background-color: #16213e;
+    color: #eee;
+}
+body.dark-mode h2 {
+    color: #e94560;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    button {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    .description {
+        width: 95%;
+        padding: 20px;
+    }
+    .cta-btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
